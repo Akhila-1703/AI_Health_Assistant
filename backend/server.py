@@ -117,6 +117,39 @@ def get_dietary_recommendations(symptom: str) -> Dict[str, List[str]]:
             "meals": ["Breakfast: Greek yogurt with berries and granola",
                      "Lunch: Lentil soup with whole grain bread",
                      "Dinner: Grilled salmon with quinoa and vegetables"]
+        },
+        "stomach pain": {
+            "consume": ["Bland foods (rice, toast, bananas)", "Chamomile tea", "Ginger root",
+                       "Small frequent meals", "Probiotic foods (plain yogurt)", "Bone broth",
+                       "Cooked vegetables (carrots, sweet potatoes)"],
+            "avoid": ["Spicy foods", "High-fat foods", "Dairy (if lactose intolerant)", "Carbonated drinks",
+                     "Alcohol", "Acidic foods (tomatoes, citrus)", "Raw vegetables during flare-ups"],
+            "focus": ["Gentle on digestive system", "Anti-inflammatory foods", "Easy digestion"],
+            "meals": ["Start: Plain white rice with banana",
+                     "Progress: Chicken broth with crackers",
+                     "Advance: Baked chicken with steamed carrots"]
+        },
+        "anxiety": {
+            "consume": ["Omega-3 rich fish (salmon, sardines)", "Magnesium foods (dark chocolate, nuts)",
+                       "Complex carbohydrates (oats, sweet potatoes)", "Herbal teas (passionflower, lemon balm)",
+                       "Probiotic foods (kefir, sauerkraut)", "Zinc-rich foods (pumpkin seeds)"],
+            "avoid": ["Caffeine excess", "Alcohol", "Refined sugars", "Processed foods",
+                     "High-sodium foods", "Energy drinks"],
+            "focus": ["Stable blood sugar", "Gut-brain axis support", "Calming nutrients"],
+            "meals": ["Breakfast: Oatmeal with walnuts and berries",
+                     "Lunch: Salmon salad with leafy greens",
+                     "Dinner: Turkey with sweet potato and steamed broccoli"]
+        },
+        "insomnia": {
+            "consume": ["Tryptophan foods (turkey, milk, bananas)", "Magnesium-rich foods (almonds, spinach)",
+                       "Tart cherry juice", "Herbal teas (chamomile, valerian)", "Complex carbs (whole grains)",
+                       "Calcium sources (sesame seeds, dairy)"],
+            "avoid": ["Caffeine after 2 PM", "Large meals before bed", "Alcohol", "Spicy foods",
+                     "High-sugar foods", "Excessive fluids before bed"],
+            "focus": ["Sleep-promoting nutrients", "Evening meal timing", "Melatonin precursors"],
+            "meals": ["Dinner: Grilled chicken with quinoa (3 hours before bed)",
+                     "Evening snack: Small banana with almond butter",
+                     "Bedtime: Chamomile tea"]
         }
     }
     
