@@ -511,31 +511,7 @@ async def analyze_symptom(request: SymptomRequest):
         logger.error(f"Error in AI symptom analysis: {e}")
         raise HTTPException(status_code=500, detail=f"AI analysis error: {str(e)}")
 
-@app.post("/api/track-symptom")
-async def track_symptom(tracker: SymptomTracker):
-    """Track symptoms for AI pattern analysis"""
-    try:
-        # Generate unique user ID if not provided
-        if not tracker.user_id:
-            tracker.user_id = str(uuid.uuid4())
-        
-        # Add timestamp if not provided
-        if not tracker.timestamp:
-            tracker.timestamp = datetime.now().isoformat()
-        
-        # In production, this would save to database
-        logger.info(f"Symptom tracked: {tracker.symptom} for user {tracker.user_id}")
-        
-        return {
-            "status": "success",
-            "message": "Symptom tracked successfully",
-            "user_id": tracker.user_id,
-            "next_analysis": "Available after 3+ entries for pattern recognition"
-        }
-        
-    except Exception as e:
-        logger.error(f"Error tracking symptom: {e}")
-        raise HTTPException(status_code=500, detail=f"Tracking error: {str(e)}")
+
 
 if __name__ == "__main__":
     import uvicorn
