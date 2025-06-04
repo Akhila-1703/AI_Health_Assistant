@@ -511,6 +511,7 @@ async def analyze_symptom(request: SymptomRequest):
         logger.error(f"Error in AI symptom analysis: {e}")
         raise HTTPException(status_code=500, detail=f"AI analysis error: {str(e)}")
 
+# Advanced AI Chat Interface
 
 
 if __name__ == "__main__":
