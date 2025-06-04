@@ -33,3 +33,5 @@ requests>=2.31.0
 gitpython>=3.1.44
 setuptools>=45
 wheel
+fastapi
+uvicorn
