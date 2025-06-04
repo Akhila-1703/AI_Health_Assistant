@@ -33,6 +33,31 @@ class SymptomRequest(BaseModel):
     gender: Optional[str] = ""
     medical_history: Optional[str] = ""
 
+class ChatMessage(BaseModel):
+    message: str
+    user_id: Optional[str] = None
+    context: Optional[Dict[str, Any]] = None
+
+class ChatResponse(BaseModel):
+    response: str
+    suggestions: List[str]
+    follow_up_questions: List[str]
+    ai_confidence: str
+
+class HealthDashboard(BaseModel):
+    user_id: str
+    symptom_trends: List[Dict[str, Any]]
+    health_score: int
+    risk_factors: List[str]
+    improvement_areas: List[str]
+    ai_recommendations: List[str]
+
+class VoiceInput(BaseModel):
+    audio_text: str
+    confidence: float = 1.0
+    language: str = "en"
+    user_id: Optional[str] = None
+
 class DietRecommendation(BaseModel):
     foods_to_consume: List[str]
     foods_to_avoid: List[str]
